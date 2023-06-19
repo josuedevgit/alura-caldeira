@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function sorteia(n) {
+        return Math.round(Math.random() * n);
+    }
+
+    var numeroPensado = sorteia(10);
+    var chute = parseInt(prompt("Vamos brincar de advinhar o número! Digite um chute:"));
+
+    if (numeroPensado == chute) {
+        mostra("Na mosca!");
+    } else if (chute > numeroPensado) {
+        mostra("ERROU! Chutou alto! Tecle F5 e tente novamente!");
+        mostra("Número Pensado: " + numeroPensado);
+    } else {
+        mostra("ERROU! Chutou baixo, hein! Tecle F5 e tente novamente!");
+        mostra("Número Pensado: " + numeroPensado);
+    }
+</script>
