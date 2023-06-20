@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function sorteia(n) {
+        return Math.round(Math.random() * n);
+    }
+
+
+    var anoCopa = 1930;
+    var limite = parseInt(prompt("Entre com a data limite:"))
+    if (limite < 1930) {
+        mostra("Data inválido. Tecle F5 e tente novamente!");
+    }
+
+    while (anoCopa <= limite) {
+        mostra("Teve copa em " + anoCopa);
+        anoCopa = anoCopa + 4;
+    }
+
+    mostra("Fim!");
+    
+</script>
