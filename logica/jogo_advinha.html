@@ -15,15 +15,22 @@
     }
 
     var numeroPensado = sorteia(10);
-    var chute = parseInt(prompt("Vamos brincar de advinhar o número! Digite um chute:"));
 
-    if (numeroPensado == chute) {
-        mostra("Na mosca!");
-    } else if (chute > numeroPensado) {
-        mostra("ERROU! Chutou alto! Tecle F5 e tente novamente!");
-        mostra("Número Pensado: " + numeroPensado);
-    } else {
-        mostra("ERROU! Chutou baixo, hein! Tecle F5 e tente novamente!");
-        mostra("Número Pensado: " + numeroPensado);
+    var tentativas = 1;
+    while(tentativas <= 3) {
+        var chute = parseInt(prompt("Vamos brincar de advinhar o número! Digite um chute:"));
+        if (numeroPensado == chute) {
+            mostra("Na mosca!");
+            break;
+        } else if (chute > numeroPensado) {
+            mostra("ERROU! Chutou alto! Tecle F5 e tente novamente!");
+            mostra("Número Pensado: " + numeroPensado);
+        } else {
+            mostra("ERROU! Chutou baixo, hein! Tecle F5 e tente novamente!");
+            mostra("Número Pensado: " + numeroPensado);
+        }
+        tentativas++;
     }
+
+    mostra("Fim!");
 </script>
