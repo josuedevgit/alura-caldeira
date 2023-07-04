@@ -1,0 +1,1 @@
+console.log("Criando app de gerenciamento de jogos");

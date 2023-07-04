@@ -231,3 +231,16 @@ main {
         margin: 10vh auto;
     }
 }
+
+.alterar {
+    margin: 2px;
+    width: 200px;
+    z-index: 100;
+}
+
+.botoes {
+   position: relative;
+   right: 5%;
+   bottom: 6%;
+   display: flex;
+}
