@@ -43,14 +43,18 @@ public class Conta {
 	}
 	
 	public void setAgencia(int agencia) {
+		if (agencia <= 0) {
+			System.out.println("Não pode valor menor igual a 0");
+			return;
+		}
 		this.agencia = agencia;
 	}
 
 	public void setTitular(Cliente titular) {
-		this.titular = titular
+		this.titular = titular;
 	}
 
-	public int getTitular() {
+	public Cliente getTitular() {
 		return this.titular;
 	}
 }
